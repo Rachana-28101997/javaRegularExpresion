@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.Scanner;
 public class RegularExpression {
 	public static void main(String[] args) {
-		String regex = "^[a-z]+[0-9]*([-_+.][0-9a-z]+)*@[0-9a-z]+[.][a-z]{2,4}([,]{1})*([.][a-z]{2})*$";
+		String regex = "^\\+(?:[0-9] ?){6,14}[0-9]$";
 		System.out.println("enter the pattern");
 		Scanner sc=new Scanner(System.in);
 		String text=sc.nextLine();
@@ -12,7 +12,6 @@ public class RegularExpression {
 		Matcher match=pattern.matcher(text);
 		boolean result=match.matches();
 		System.out.println(result);
-		sc.close();
 	}
 	
 
